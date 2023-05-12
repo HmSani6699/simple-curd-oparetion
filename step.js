@@ -66,9 +66,37 @@
     *               ---------------
     *                     Data ret
     *                  -------------
-    * 1. 
+    * 1. [VISIT ] :NODE MONGODB CURD > Usage Examples > find Operation >  find Multiple Document
+    * 2. app.get('/user',async (req,res)=>{
+            const cursor = usersCollection.find();
+            const result = await cursor.toArray();
+             res.send(result)
+        })
     * 
     * 
     * 
+    * 
+    * 
+    *                       -------------------
+    *                           Data Delete
+    *                        -----------------
+    *            [CLIENT SITE]
+    * 
+    * 1. creat a button , and added to onclik , pas to unick id 
+    * 2. const handleDelte = _id => {
+        console.log(_id);
+        fetch(`http://localhost:5000/user/${_id}`,{
+            method:'DELETE'
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            console.log(data);
+        })
+    }
+    *         [SERVER SITE]
+    * 1. [VISIT ] :NODE MONGODB CURD > Usage Examples > Delete Operation >  Delete a Document
+    * 2.   const query ={_id : new ObjectId(id)};
+            const result = await usersCollection.deleteOne(query);
+            res.send(result)
     * *
  */
