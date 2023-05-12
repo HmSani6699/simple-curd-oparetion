@@ -64,7 +64,7 @@
     * 
     * 
     *               ---------------
-    *                     Data ret
+    *                     Data read
     *                  -------------
     * 1. [VISIT ] :NODE MONGODB CURD > Usage Examples > find Operation >  find Multiple Document
     * 2. app.get('/user',async (req,res)=>{
